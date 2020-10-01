@@ -1,8 +1,8 @@
 function displayTime() {
     var dTime = new Date();
-    var hour = now.getHours(); // 0 - 23
-    var minute = now.getMinutes(); // 0 - 59
-    var seconds = now.getSeconds(); // 0 - 59
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var seconds = now.getSeconds();
    
   var session = (hour < 12) ? "AM" : "PM";
     
