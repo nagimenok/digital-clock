@@ -3,13 +3,14 @@ function displayTime() {
     var hour = dTime.getHours();
     var minute = dTime.getMinutes();
     var second = dTime.getSeconds();
+    var date = dTime.getFullYear()+'-'+dTime.getMonth()+'-'+dTime.getDate();
    
+
   var session = (hour < 12) ? "AM" : "PM";
-    
-   hour = (hour > 12) ? hour - 12 : hour;
+  hour = (hour > 12) ? hour - 12 : hour;
 
-
-    document.getElementById('clock').innerHTML = hour + " : " + minute + " : " + second + " " + session;
-    var time = setTimeout(displayTime, 1000);
+  
+    document.getElementById('clock').innerHTML = date + " " + hour + " : " + minute + " : " + second + " " + session;
+    var t = setTimeout(displayTime, 1000);
     
 }
