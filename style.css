@@ -31,3 +31,13 @@ h1{
 	font-size: 100px;
 	text-shadow: 5px 5px #558ABB;
 }
+
+#date{
+	width: 100%;
+	font-family: Arial,Helvetica,Verdana,Sans-serif;
+	position: absolute;
+	text-align: center;
+	margin-top: 40%;
+	font-size: 100px;
+	text-shadow: 5px 5px #558ABB;
+}

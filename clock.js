@@ -9,8 +9,8 @@ function displayTime() {
   var session = (hour < 12) ? "AM" : "PM";
   hour = (hour > 12) ? hour - 12 : hour;
 
-  
-    document.getElementById('clock').innerHTML = date + " " + hour + " : " + minute + " : " + second + " " + session;
+  	document.getElementById('date').innerHTML = date;
+    document.getElementById('clock').innerHTML = hour + " : " + minute + " : " + second + " " + session;
     var t = setTimeout(displayTime, 1000);
     
 }
