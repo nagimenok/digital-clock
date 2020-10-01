@@ -4,7 +4,7 @@ function displayTime() {
     var minute = dTime.getMinutes();
     var second = dTime.getSeconds();
     // var date = dTime.getFullYear()+'-'+dTime.getMonth()+'-'+dTime.getDate();
-    var date = dTime.getDay()
+    var date = dTime.getDate()
     var year = dTime.getFullYear()
    
 
@@ -40,7 +40,7 @@ const weekdays = [
 'Sunday'
 ]
 
-const dateIndex = dTime.getDay();
+const dateIndex = dTime.getDate();
 const dateName = weekdays[dateIndex];
 console.log(dateName);
 
