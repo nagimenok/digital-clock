@@ -40,7 +40,7 @@ const weekdays = [
 'Sunday'
 ]
 
-const dateIndex = dTime.getDate();
+const dateIndex = dTime.getDay();
 const dateName = weekdays[dateIndex];
 console.log(dateName);
 
