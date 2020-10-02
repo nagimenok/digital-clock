@@ -31,13 +31,14 @@ const monthName = months[monthIndex]
 console.log(monthName)
 
 const weekdays = [
+'Sunday',
 'Monday', 
 'Tuesday', 
 'Wednesday', 
 'Thursday', 
 'Friday', 
 'Saturday', 
-'Sunday'
+
 ]
 
 const dateIndex = dTime.getDay();
