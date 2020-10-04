@@ -1,52 +1,41 @@
+isMilitary = false;
+
 function displayTime() {
-    var dTime = new Date();
-    var hour = dTime.getHours();
-    var minute = dTime.getMinutes();
-    var second = dTime.getSeconds();
-    // var date = dTime.getFullYear()+'-'+dTime.getMonth()+'-'+dTime.getDate();
-    var date = dTime.getDate()
-    var year = dTime.getFullYear()
-   
+  const time = new Date();
+  let hour = time.getHours();
+  let minute = time.getMinutes();
+  let second = time.getSeconds();
 
-  var session = (hour < 12) ? "AM" : "PM";
-  hour = (hour > 12) ? hour - 12 : hour;
+  const session = hour < 12 ? "AM" : "PM";
+  const standardTime = hour > 12 ? hour - 12 : hour;
+  minute = minute < 10 ? `0${minute}` : minute;
+  second = second < 10 ? `0${second}` : second;
+  const clock = document.getElementById("clock");
 
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-]
-
-const monthIndex = dTime.getMonth()
-const monthName = months[monthIndex]
-console.log(monthName)
-
-const weekdays = [
-'Sunday',
-'Monday', 
-'Tuesday', 
-'Wednesday', 
-'Thursday', 
-'Friday', 
-'Saturday', 
-
-]
-
-const dateIndex = dTime.getDay();
-const dateName = weekdays[dateIndex];
-console.log(dateName);
-
-  	document.getElementById('date').innerHTML = dateName + ", " + monthName + " " + date + ", " + year;
-    document.getElementById('clock').innerHTML = hour + " : " + minute + " : " + second + " " + session;
-    var t = setTimeout(displayTime, 1000);
-    
+  isMilitary
+    ? (clock.innerHTML = `${hour} : ${minute} : ${second}`)
+    : (clock.innerHTML = `${standardTime} : ${minute} : ${second} ${session}`);
 }
+
+function displayDate() {
+  const date = new Date();
+
+  const weekday = date.toLocaleString("default", { weekday: "long" });
+  const month = date.toLocaleString("default", { month: "long" });
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  const dateToday = document.getElementById("date");
+  dateToday.innerHTML = `${weekday}, ${month} ${day}, ${year}`
+
+}
+
+displayDate();
+
+const toggle = document.getElementById("toggle-btn");
+toggle.addEventListener("click", () => {
+  isMilitary = !isMilitary;
+  displayTime();
+});
+
+setInterval(displayTime, 1000);
