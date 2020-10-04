@@ -2,6 +2,8 @@ Welcome to my first project! It's a Digital Clock.
 
 Click [here](https://nagimenok.github.io/digital-clock/index.html) to check it out! 
 
+![](myclock.png)
+
 **Summary** 
 
 I have always been a curios person and wanted to know how things work behind the scene. 
