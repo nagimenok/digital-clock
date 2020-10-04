@@ -1,6 +1,6 @@
 Welcome to my first project! It's a Digital Clock. 
 
-Click [here] (https://nagimenok.github.io/digital-clock/index.html) to check it out! 
+Click [here](https://nagimenok.github.io/digital-clock/index.html) to check it out! 
 
 **Summary** 
 
@@ -11,5 +11,5 @@ During this project I learned the basics of HTML, CSS and JavaScript, which trig
 
 **Author**
 
-Nagima Rakhimova - *Software Developer* - [Linkedin] (https://www.linkedin.com/in/nagima-r-445841a3/)
+Nagima Rakhimova - *Software Developer* - [Linkedin](https://www.linkedin.com/in/nagima-r-445841a3/)
 
